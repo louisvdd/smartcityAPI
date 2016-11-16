@@ -1,0 +1,13 @@
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\bin\Debug\Model.Test.dll.config
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\bin\Debug\Model.Test.dll
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\bin\Debug\Model.Test.pdb
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\bin\Debug\EntityFramework.dll
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\bin\Debug\Model.dll
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\bin\Debug\Model.pdb
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\bin\Debug\EntityFramework.xml
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\obj\Debug\Model.Test.csprojResolveAssemblyReference.cache
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\obj\Debug\Model.Test.dll
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model.Test\obj\Debug\Model.Test.pdb
