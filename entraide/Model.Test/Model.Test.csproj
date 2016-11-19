@@ -68,8 +68,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\Desktop\RestAPI\Model\Model.csproj">
-      <Project>{c29bfb40-c647-4902-a6ff-08b6e7851358}</Project>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{f7782634-81e9-4184-94de-6ea3d88c4ee2}</Project>
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
