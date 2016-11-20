@@ -7,3 +7,13 @@ C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model\bin\Debug
 C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model\obj\Debug\Model.dll
 C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\API\entraide\Model\obj\Debug\Model.pdb
+D:\GitHub\smartcityAPI\entraide\Model\bin\Debug\Model.dll.config
+D:\GitHub\smartcityAPI\entraide\Model\bin\Debug\Model.dll
+D:\GitHub\smartcityAPI\entraide\Model\bin\Debug\Model.pdb
+D:\GitHub\smartcityAPI\entraide\Model\bin\Debug\EntityFramework.dll
+D:\GitHub\smartcityAPI\entraide\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\smartcityAPI\entraide\Model\bin\Debug\EntityFramework.xml
+D:\GitHub\smartcityAPI\entraide\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\smartcityAPI\entraide\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\GitHub\smartcityAPI\entraide\Model\obj\Debug\Model.dll
+D:\GitHub\smartcityAPI\entraide\Model\obj\Debug\Model.pdb

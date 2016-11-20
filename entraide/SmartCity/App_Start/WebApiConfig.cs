@@ -25,6 +25,12 @@ namespace SmartCity
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "UserByLoginAndPassword",
+                routeTemplate: "api/user/getUser/{mailAdress}",
+                defaults: new { controller =  "User"}
+                );
         }
     }
 }

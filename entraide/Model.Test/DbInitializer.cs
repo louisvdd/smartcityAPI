@@ -62,6 +62,25 @@ namespace Model.Tests
                 NumServiceGive = 0
             };
             context.Users.Add(user1);
+            User user2 = new User()
+            {
+                Id = 2,
+                FirstName = "Michiels",
+                LastName = "Mélina",
+                Street = "rue des choupi",
+                Number = 14,
+                PostalCode = 5100,
+                City = "Choupi",
+                AdressMail = "choupi@hotmail.com",
+                PhoneNumber = 0495197435,
+                Category = "jeune",
+                Password = "choupi",
+                DateInscription = DateTime.Now,
+                NumGetService = 0,
+                NumServiceGive = 0
+            };
+            context.Users.Add(user2);
+            context.SaveChanges();
         }
     }
 }

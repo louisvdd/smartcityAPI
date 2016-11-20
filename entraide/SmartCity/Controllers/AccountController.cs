@@ -28,6 +28,7 @@ namespace SmartCity.Controllers
 
         public AccountController()
         {
+
         }
 
         public AccountController(ApplicationUserManager userManager,
