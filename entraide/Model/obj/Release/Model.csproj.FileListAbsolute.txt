@@ -1,0 +1,10 @@
+D:\GitHub\smartcityAPI\entraide\Model\bin\Release\Model.dll.config
+D:\GitHub\smartcityAPI\entraide\Model\bin\Release\Model.dll
+D:\GitHub\smartcityAPI\entraide\Model\bin\Release\Model.pdb
+D:\GitHub\smartcityAPI\entraide\Model\bin\Release\EntityFramework.dll
+D:\GitHub\smartcityAPI\entraide\Model\bin\Release\EntityFramework.SqlServer.dll
+D:\GitHub\smartcityAPI\entraide\Model\bin\Release\EntityFramework.xml
+D:\GitHub\smartcityAPI\entraide\Model\bin\Release\EntityFramework.SqlServer.xml
+D:\GitHub\smartcityAPI\entraide\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+D:\GitHub\smartcityAPI\entraide\Model\obj\Release\Model.dll
+D:\GitHub\smartcityAPI\entraide\Model\obj\Release\Model.pdb

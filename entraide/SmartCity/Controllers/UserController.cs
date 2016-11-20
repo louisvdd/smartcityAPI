@@ -17,13 +17,14 @@ namespace SmartCity.Controllers
     {
         private EntraideContext db = new EntraideContext();
         
+        // GET : api/User
         public IQueryable<User> GetUsers()
         {
             return db.Users.ToList().AsQueryable();
         }
 
+        // GET : api/User/5
         [ResponseType(typeof(User))]
-        [Route("UserByLoginAndPassword")]
         public async Task<IHttpActionResult> GetUser(string adressMail)
         {
             User user = await db.Users.FindAsync(adressMail);
@@ -31,7 +32,8 @@ namespace SmartCity.Controllers
             {
                 return NotFound();
             }
-            return Ok(User);
+
+            return Ok(user);
         }
     }
 }
