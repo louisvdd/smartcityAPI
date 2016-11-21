@@ -51,7 +51,7 @@ namespace SmartCity.Models
         [Required]
         public int NumServiceGive { get; set; }
 
-        public virtual ICollection<Service> Users { get; set; }
+        public ICollection<Service> ServicesNeeded { get; set; }
     }
 }
 

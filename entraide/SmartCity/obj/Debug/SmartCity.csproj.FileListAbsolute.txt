@@ -176,8 +176,6 @@ D:\GitHub\smartcityAPI\entraide\SmartCity\bin\System.Web.Http.Owin.xml
 D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csprojResolveAssemblyReference.cache
 D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.dll
 D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.pdb
-D:\GitHub\smartcityAPI\entraide\SmartCity\bin\Model.dll
-D:\GitHub\smartcityAPI\entraide\SmartCity\bin\Model.pdb
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\roslyn\csc.exe
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\roslyn\csc.exe.config
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\roslyn\csc.rsp
@@ -280,3 +278,17 @@ C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Security.Microsoft
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\System.Web.Http.Owin.xml
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.dll
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.pdb
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\csc.exe.config
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\csc.rsp
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\csi.exe
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\csi.rsp
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\System.AppContext.dll
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\System.IO.FileSystem.dll
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\vbc.exe.config
+D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\vbc.rsp

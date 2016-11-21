@@ -32,7 +32,7 @@ namespace SmartCity.Models
 
             modelBuilder.Entity<Service>()
                 .HasRequired(s => s.UserNeedService)
-                .WithMany(u => u.Users)
+                .WithMany(u => u.ServicesNeeded)
                 .WillCascadeOnDelete(false);
         }
 

@@ -22,7 +22,7 @@ namespace SmartCity.test
             using (var context = GetContext())
             {
                 context.Database.Initialize(true);
-                Assert.AreEqual(1, context.Services.ToList().Count);
+                Assert.AreEqual(2, context.UserApps.ToList().Count);
             }
         }
     }
