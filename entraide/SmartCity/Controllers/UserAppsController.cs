@@ -13,44 +13,44 @@ using SmartCity.Models;
 
 namespace SmartCity.Controllers
 {
-    public class UsersController : ApiController
+    public class UserAppsController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: api/Users
-        public IQueryable<User> GetUsers()
+        // GET: api/UserApps
+        public IQueryable<UserApp> GetUserApps()
         {
-            return db.Users;
+            return db.UserApps;
         }
 
-        // GET: api/Users/5
-        [ResponseType(typeof(User))]
-        public async Task<IHttpActionResult> GetUser(long id)
+        // GET: api/UserApps/5
+        [ResponseType(typeof(UserApp))]
+        public async Task<IHttpActionResult> GetUserApp(long id)
         {
-            User user = await db.Users.FindAsync(id);
-            if (user == null)
+            UserApp userApp = await db.UserApps.FindAsync(id);
+            if (userApp == null)
             {
                 return NotFound();
             }
 
-            return Ok(user);
+            return Ok(userApp);
         }
 
-        // PUT: api/Users/5
+        // PUT: api/UserApps/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutUser(long id, User user)
+        public async Task<IHttpActionResult> PutUserApp(long id, UserApp userApp)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != user.Id)
+            if (id != userApp.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(user).State = EntityState.Modified;
+            db.Entry(userApp).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace SmartCity.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(id))
+                if (!UserAppExists(id))
                 {
                     return NotFound();
                 }
@@ -71,35 +71,35 @@ namespace SmartCity.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Users
-        [ResponseType(typeof(User))]
-        public async Task<IHttpActionResult> PostUser(User user)
+        // POST: api/UserApps
+        [ResponseType(typeof(UserApp))]
+        public async Task<IHttpActionResult> PostUserApp(UserApp userApp)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Users.Add(user);
+            db.UserApps.Add(userApp);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = user.Id }, user);
+            return CreatedAtRoute("DefaultApi", new { id = userApp.Id }, userApp);
         }
 
-        // DELETE: api/Users/5
-        [ResponseType(typeof(User))]
-        public async Task<IHttpActionResult> DeleteUser(long id)
+        // DELETE: api/UserApps/5
+        [ResponseType(typeof(UserApp))]
+        public async Task<IHttpActionResult> DeleteUserApp(long id)
         {
-            User user = await db.Users.FindAsync(id);
-            if (user == null)
+            UserApp userApp = await db.UserApps.FindAsync(id);
+            if (userApp == null)
             {
                 return NotFound();
             }
 
-            db.Users.Remove(user);
+            db.UserApps.Remove(userApp);
             await db.SaveChangesAsync();
 
-            return Ok(user);
+            return Ok(userApp);
         }
 
         protected override void Dispose(bool disposing)
@@ -111,9 +111,9 @@ namespace SmartCity.Controllers
             base.Dispose(disposing);
         }
 
-        private bool UserExists(long id)
+        private bool UserAppExists(long id)
         {
-            return db.Users.Count(e => e.Id == id) > 0;
+            return db.UserApps.Count(e => e.Id == id) > 0;
         }
     }
 }

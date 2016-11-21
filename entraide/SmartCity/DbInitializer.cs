@@ -12,28 +12,12 @@ namespace SmartCity
     { 
          protected override void Seed(ApplicationDbContext context)
          {
-            CategoryService CategoryService1 = new CategoryService()
+            CategoryService categoryService1 = new CategoryService()
             {
                 Id = 1,
                 Label = "Jardinage"
             };
-            context.CategoryServices.Add(CategoryService1);
-
-            Service service1 = new Service()
-            {
-                Id = 1,
-                DescriptionService = "Bonjour j'aimerais que quelqu'un tonde mon jardin",
-                Category = CategoryService1,
-                DateService = DateTime.Now
-            };
-            context.Services.Add(service1);
-
-            DoService doService1 = new DoService()
-            {
-                Id = 1,
-                DateService = new DateTime(2016, 12, 15)
-            };
-            context.DoServices.Add(doService1);
+            context.CategoryServices.Add(categoryService1);
 
             Comment comment1 = new Comment()
             {
@@ -43,7 +27,7 @@ namespace SmartCity
             };
             context.Comments.Add(comment1);
 
-            User user1 = new User()
+            UserApp user1 = new UserApp()
             {
                 Id = 1,
                 FirstName = "Marcoty",
@@ -55,14 +39,15 @@ namespace SmartCity
                 Country = "Belgique",
                 AdressMail = "coucou@plazzor.be",
                 PhoneNumber = 0498666666,
-                Category = "jeune",
+                Category = "young",
                 Password = "augu",
                 DateInscription = DateTime.Now,
                 NumGetService = 0,
-                NumServiceGive = 0
+                NumServiceGive = 0,
+                
             };
-            context.Users.Add(user1);
-            User user2 = new User()
+            context.UserApps.Add(user1);
+            UserApp user2 = new UserApp()
             {
                 Id = 2,
                 FirstName = "Michiels",
@@ -73,13 +58,36 @@ namespace SmartCity
                 City = "Choupi",
                 AdressMail = "choupi@hotmail.com",
                 PhoneNumber = 0495197435,
-                Category = "jeune",
+                Country = "Belgique",
+                Category = "young",
                 Password = "choupi",
                 DateInscription = DateTime.Now,
                 NumGetService = 0,
                 NumServiceGive = 0
             };
-            context.Users.Add(user2);
+            context.UserApps.Add(user2);
+            Service service1 = new Service()
+            {
+                Id = 1,
+                DescriptionService = "Bonjour j'aimerais que quelqu'un tonde mon jardin",
+                Category = categoryService1,
+                DateService = DateTime.Now,
+                UserNeedService = user1
+           
+            };
+            context.Services.Add(service1);
+
+            DoService doService1 = new DoService()
+            {
+                Id = 1,
+                DateService = new DateTime(2016, 12, 15),
+                UserDoService = user1,
+                ServiceDone = service1, 
+                CommentOfService = comment1
+                 
+                 
+            };
+            context.DoServices.Add(doService1);
             context.SaveChanges();
         }
     }

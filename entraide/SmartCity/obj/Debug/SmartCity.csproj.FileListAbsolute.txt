@@ -280,4 +280,3 @@ C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Security.Microsoft
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\System.Web.Http.Owin.xml
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.dll
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.pdb
-C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csprojResolveAssemblyReference.cache

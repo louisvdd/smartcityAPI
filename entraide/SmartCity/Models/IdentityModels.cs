@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.Data.Entity;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -24,7 +25,17 @@ namespace SmartCity.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Service>()
+                .HasRequired(s => s.UserNeedService)
+                .WithMany(u => u.Users)
+                .WillCascadeOnDelete(false);
+        }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
@@ -38,6 +49,6 @@ namespace SmartCity.Models
 
         public System.Data.Entity.DbSet<SmartCity.Models.Service> Services { get; set; }
 
-        public System.Data.Entity.DbSet<SmartCity.Models.User> Users { get; set; }
+        public System.Data.Entity.DbSet<SmartCity.Models.UserApp> UserApps { get; set; }
     }
 }

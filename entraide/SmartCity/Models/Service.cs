@@ -19,7 +19,7 @@ namespace SmartCity.Models
 
         //ForeignKey
         [Required]
-        public User userNeedService { get; set; }
+        public UserApp UserNeedService { get; set; }
         [Required]
         public CategoryService Category { get; set; }
     }

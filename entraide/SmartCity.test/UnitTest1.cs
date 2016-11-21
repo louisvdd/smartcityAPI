@@ -17,8 +17,11 @@ namespace SmartCity.test
         [TestMethod]
         public void CanGetCustomers()
         {
+            Database.SetInitializer(new DbInitializer());
+
             using (var context = GetContext())
             {
+                context.Database.Initialize(true);
                 Assert.AreEqual(1, context.Services.ToList().Count);
             }
         }

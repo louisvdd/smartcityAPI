@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SmartCity.Models
 {
-    public class User
+    public class UserApp
     {
         [Key]
         public long Id { get; set; }
@@ -50,5 +50,9 @@ namespace SmartCity.Models
         public int NumGetService { get; set; }
         [Required]
         public int NumServiceGive { get; set; }
+
+        public virtual ICollection<Service> Users { get; set; }
     }
 }
+
+

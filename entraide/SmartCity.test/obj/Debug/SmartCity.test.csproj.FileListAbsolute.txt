@@ -41,7 +41,6 @@ C:\Wrkfldr\smartcityAPI\entraide\SmartCity.test\bin\Debug\Microsoft.Owin.Securit
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity.test\bin\Debug\Microsoft.Owin.Security.OAuth.dll
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity.test\bin\Debug\Owin.dll
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity.test\bin\Debug\System.Web.Http.dll
-C:\Wrkfldr\smartcityAPI\entraide\SmartCity.test\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity.test\bin\Debug\System.Web.Http.Owin.dll
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity.test\bin\Debug\System.Net.Http.Formatting.dll
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity.test\bin\Debug\Newtonsoft.Json.dll
