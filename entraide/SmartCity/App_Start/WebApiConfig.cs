@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using System.Data.Entity;
 
 namespace SmartCity
 {
@@ -31,6 +32,7 @@ namespace SmartCity
                 routeTemplate: "api/user/getUser/{mailAdress}",
                 defaults: new { controller =  "User"}
                 );
+            //Database.SetInitializer(new DbInitializer());
         }
     }
 }

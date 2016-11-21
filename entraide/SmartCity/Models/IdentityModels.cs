@@ -29,5 +29,15 @@ namespace SmartCity.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<SmartCity.Models.CategoryService> CategoryServices { get; set; }
+
+        public System.Data.Entity.DbSet<SmartCity.Models.Comment> Comments { get; set; }
+
+        public System.Data.Entity.DbSet<SmartCity.Models.DoService> DoServices { get; set; }
+
+        public System.Data.Entity.DbSet<SmartCity.Models.Service> Services { get; set; }
+
+        public System.Data.Entity.DbSet<SmartCity.Models.User> Users { get; set; }
     }
 }

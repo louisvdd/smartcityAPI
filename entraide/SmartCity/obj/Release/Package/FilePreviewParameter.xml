@@ -1,13 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="g-aideAppWeb" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\GitHub\\smartcityAPI\\entraide\\SmartCity\\obj\\Release\\Package\\PackageTmp$" />
-    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\GitHub\\smartcityAPI\\entraide\\SmartCity\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Wrkfldr\\smartcityAPI\\entraide\\SmartCity\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Wrkfldr\\smartcityAPI\\entraide\\SmartCity\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
   <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:entraide.database.windows.net,1433;Initial Catalog=entraide;User ID=sponcho@entraide;Password=Beguinvdd123" tags="">
-    <parameterEntry kind="XmlFile" scope="D:\\GitHub\\smartcityAPI\\entraide\\SmartCity\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-  <parameter name="Model.EntraideContext-Web.config Connection String" description="" value="Data Source=tcp:entraide.database.windows.net,1433;Initial Catalog=entraide;User ID=sponcho@entraide;Password=Beguinvdd123" tags="">
-    <parameterEntry kind="XmlFile" scope="D:\\GitHub\\smartcityAPI\\entraide\\SmartCity\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Model.EntraideContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Wrkfldr\\smartcityAPI\\entraide\\SmartCity\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
 </parameters>
