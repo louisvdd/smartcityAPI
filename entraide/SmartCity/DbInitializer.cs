@@ -22,7 +22,7 @@ namespace SmartCity
             Comment comment1 = new Comment()
             {
                 Id = 1,
-                CommentDescription = "Ducon",
+                CommentDescription = "augu",
                 Rating = 3.5
             };
             context.Comments.Add(comment1);
@@ -71,7 +71,7 @@ namespace SmartCity
                 Id = 1,
                 DescriptionService = "Bonjour j'aimerais que quelqu'un tonde mon jardin",
                 Category = categoryService1,
-                DateService = DateTime.Now,
+                DatePublicationService = DateTime.Now,
                 UserNeedService = user1
            
             };

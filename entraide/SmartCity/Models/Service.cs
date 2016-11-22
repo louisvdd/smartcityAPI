@@ -14,7 +14,7 @@ namespace SmartCity.Models
         public string DescriptionService { get; set; }
 
         [Required]
-        public DateTime DateService { get; set; }
+        public DateTime DatePublicationService { get; set; }
 
 
         //ForeignKey
