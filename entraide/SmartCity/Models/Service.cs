@@ -11,15 +11,16 @@ namespace SmartCity.Models
         [Key]
         public long Id { get; set; }
         [Required]
+        public string NameService { get; set; }
+        [Required]
         public string DescriptionService { get; set; }
 
         [Required]
         public DateTime DatePublicationService { get; set; }
 
-
         //ForeignKey
         [Required]
-        public UserApp UserNeedService { get; set; }
+        public ApplicationUser UserNeedService { get; set; }
         [Required]
         public CategoryService Category { get; set; }
     }

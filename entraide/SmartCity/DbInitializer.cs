@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartCity
 {
-    public class DbInitializer : DropCreateDatabaseAlways<ApplicationDbContext>
+    public class DbInitializer : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
     { 
          protected override void Seed(ApplicationDbContext context)
          {
@@ -27,9 +27,9 @@ namespace SmartCity
             };
             context.Comments.Add(comment1);
 
-            UserApp user1 = new UserApp()
+            ApplicationUser user1 = new ApplicationUser()
             {
-                Id = 1,
+                Id = "1",
                 FirstName = "Marcoty",
                 LastName = "Justin",
                 Street = "rue du bouvreuil",
@@ -37,35 +37,35 @@ namespace SmartCity
                 PostalCode = 6001,
                 City = "Marcinelle",
                 Country = "Belgique",
-                AdressMail = "coucou@plazzor.be",
-                PhoneNumber = 0498666666,
+                //AdressMail = "coucou@plazzor.be",
+                PhoneNumber = "0498666666",
                 Category = "young",
-                Password = "augu",
+                //Password = "augu",
                 DateInscription = DateTime.Now,
                 NumGetService = 0,
                 NumServiceGive = 0,
                 
             };
-            context.UserApps.Add(user1);
-            UserApp user2 = new UserApp()
+            context.Users.Add(user1);
+            ApplicationUser user2 = new ApplicationUser()
             {
-                Id = 2,
+                Id = "2",
                 FirstName = "Michiels",
                 LastName = "Mélina",
                 Street = "rue des choupi",
                 Number = 14,
                 PostalCode = 5100,
                 City = "Choupi",
-                AdressMail = "choupi@hotmail.com",
-                PhoneNumber = 0495197435,
+                //AdressMail = "choupi@hotmail.com",
+                PhoneNumber = "0495197435",
                 Country = "Belgique",
                 Category = "young",
-                Password = "choupi",
+                //Password = "choupi",
                 DateInscription = DateTime.Now,
                 NumGetService = 0,
                 NumServiceGive = 0
             };
-            context.UserApps.Add(user2);
+            context.Users.Add(user2);
             Service service1 = new Service()
             {
                 Id = 1,

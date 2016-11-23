@@ -395,3 +395,10 @@ C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\Sm
 C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csprojResolveAssemblyReference.cache
 C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.dll
 C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.pdb
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csprojResolveAssemblyReference.cache
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.dll
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\System.Web.Cors.dll
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.xml
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.InitialCreate.resources
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csproj.GenerateResource.Cache
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.AjoutNomService.resources
