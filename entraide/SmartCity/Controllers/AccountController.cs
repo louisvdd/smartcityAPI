@@ -329,7 +329,20 @@ namespace SmartCity.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser()
+            {
+                UserName = model.Email,
+                Email = model.Email,
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Street = model.Street,
+                Number =  model.Number,
+                PostalCode = model.PostalCode,
+                City = model.City,
+                Country = model.Country,
+                Category = model.Category
+
+            };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 

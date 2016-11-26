@@ -1,4 +1,4 @@
-﻿using SmartCity.Models;
+﻿/*using SmartCity.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -91,4 +91,4 @@ namespace SmartCity
             context.SaveChanges();
         }
     }
-}
+}*/

@@ -13,44 +13,44 @@ using SmartCity.Models;
 
 namespace SmartCity.Controllers
 {
-    public class UserAppsController : ApiController
+    public class GetServicesController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: api/UserApps
-        public IQueryable<UserApp> GetUserApps()
+        // GET: api/GetServices
+        public IQueryable<GetService> GetGetServices()
         {
-            return db.UserApps;
+            return db.GetServices;
         }
 
-        // GET: api/UserApps/5
-        [ResponseType(typeof(UserApp))]
-        public async Task<IHttpActionResult> GetUserApp(long id)
+        // GET: api/GetServices/5
+        [ResponseType(typeof(GetService))]
+        public async Task<IHttpActionResult> GetGetService(long id)
         {
-            UserApp userApp = await db.UserApps.FindAsync(id);
-            if (userApp == null)
+            GetService getService = await db.GetServices.FindAsync(id);
+            if (getService == null)
             {
                 return NotFound();
             }
 
-            return Ok(userApp);
+            return Ok(getService);
         }
 
-        // PUT: api/UserApps/5
+        // PUT: api/GetServices/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutUserApp(long id, UserApp userApp)
+        public async Task<IHttpActionResult> PutGetService(long id, GetService getService)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != userApp.Id)
+            if (id != getService.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(userApp).State = EntityState.Modified;
+            db.Entry(getService).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace SmartCity.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserAppExists(id))
+                if (!GetServiceExists(id))
                 {
                     return NotFound();
                 }
@@ -71,35 +71,35 @@ namespace SmartCity.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/UserApps
-        [ResponseType(typeof(UserApp))]
-        public async Task<IHttpActionResult> PostUserApp(UserApp userApp)
+        // POST: api/GetServices
+        [ResponseType(typeof(GetService))]
+        public async Task<IHttpActionResult> PostGetService(GetService getService)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.UserApps.Add(userApp);
+            db.GetServices.Add(getService);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = userApp.Id }, userApp);
+            return CreatedAtRoute("DefaultApi", new { id = getService.Id }, getService);
         }
 
-        // DELETE: api/UserApps/5
-        [ResponseType(typeof(UserApp))]
-        public async Task<IHttpActionResult> DeleteUserApp(long id)
+        // DELETE: api/GetServices/5
+        [ResponseType(typeof(GetService))]
+        public async Task<IHttpActionResult> DeleteGetService(long id)
         {
-            UserApp userApp = await db.UserApps.FindAsync(id);
-            if (userApp == null)
+            GetService getService = await db.GetServices.FindAsync(id);
+            if (getService == null)
             {
                 return NotFound();
             }
 
-            db.UserApps.Remove(userApp);
+            db.GetServices.Remove(getService);
             await db.SaveChangesAsync();
 
-            return Ok(userApp);
+            return Ok(getService);
         }
 
         protected override void Dispose(bool disposing)
@@ -111,9 +111,9 @@ namespace SmartCity.Controllers
             base.Dispose(disposing);
         }
 
-        private bool UserAppExists(long id)
+        private bool GetServiceExists(long id)
         {
-            return db.UserApps.Count(e => e.Id == id) > 0;
+            return db.GetServices.Count(e => e.Id == id) > 0;
         }
     }
 }

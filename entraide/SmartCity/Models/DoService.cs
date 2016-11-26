@@ -15,7 +15,7 @@ namespace SmartCity.Models
 
         //Foreign Key
         [Required]
-        public UserApp UserDoService { get; set; }
+        public ApplicationUser UserDoService { get; set; }
         public Comment CommentOfService { get; set; }
         [Required]
         public Service ServiceDone { get; set; }
