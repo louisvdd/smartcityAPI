@@ -506,3 +506,12 @@ D:\GitHub\smartcityAPI2\entraide\SmartCity\obj\Debug\SmartCity.csproj.GenerateRe
 D:\GitHub\smartcityAPI2\entraide\SmartCity\obj\Debug\SmartCity.Migrations.BugTest.resources
 D:\GitHub\smartcityAPI2\entraide\SmartCity\obj\Debug\SmartCity.Migrations.Test.resources
 D:\GitHub\smartcityAPI2\entraide\SmartCity\obj\Debug\SmartCity.Migrations.FinalHope.resources
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.dll
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\System.Web.Cors.dll
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.xml
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csprojResolveAssemblyReference.cache
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.InitialCreate.resources
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.BugTest.resources
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.Test.resources
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.FinalHope.resources
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csproj.GenerateResource.Cache

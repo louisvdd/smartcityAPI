@@ -326,6 +326,7 @@
     <None Include="Properties\PublishProfiles\entraide.pubxml" />
     <None Include="Properties\PublishProfiles\G-aideAppWeb %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\g-aideAppWeb.pubxml" />
+    <None Include="Properties\PublishProfiles\g-aideappweb2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

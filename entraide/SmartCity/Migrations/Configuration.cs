@@ -12,7 +12,7 @@ namespace SmartCity.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(SmartCity.Models.ApplicationDbContext context)
@@ -58,9 +58,27 @@ namespace SmartCity.Migrations
                 NumServiceGive = 0
             };
 
+            ApplicationUser admin = new ApplicationUser()
+            {
+                UserName = "admin",
+                FirstName = "Louis",
+                LastName = "Vdd",
+                Street = "**",
+                Number = 69,
+                PostalCode = 6000,
+                City = "Charleroi",
+                Email = "louvdd@hotmail.com",
+                PhoneNumber = "0444444444",
+                Country = "Belgium",
+                Category = "young",
+                DateInscription = DateTime.Now,
+                NumGetService = 0,
+                NumServiceGive = 0
+            };
+
             manager.Create(user1, "augu12");
             manager.Create(user2, "choupi12");
-
+            manager.Create(admin, "admin");
             /*CategoryService categoryService1 = new CategoryService()
             {
                 Id = 1,

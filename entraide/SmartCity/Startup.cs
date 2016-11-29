@@ -26,6 +26,7 @@ namespace SmartCity
 
             app.UseWebApi(httpConfig);
 
+            ConfigureAuth(app);
         }
 
         private void ConfigureOAuthTokenGeneration(IAppBuilder app)
