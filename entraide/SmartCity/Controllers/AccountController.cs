@@ -16,13 +16,15 @@ using Microsoft.Owin.Security.OAuth;
 using SmartCity.Models;
 using SmartCity.Providers;
 using SmartCity.Results;
+using System.Linq;
+using System.Web.Http.Description;
 
 namespace SmartCity.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]
-    public class AccountController : ApiController
-    {
+    public class AccountController : BaseApiController
+    {  
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
 
@@ -49,6 +51,43 @@ namespace SmartCity.Controllers
                 _userManager = value;
             }
         }
+
+        [Route("users")]
+        public IHttpActionResult GetUsers()
+        {
+            return Ok(this.UserManager.Users.ToList().Select(u => this.TheModelFactory.Create(u)));
+        }
+
+        [Route("user/{id:guid}", Name = "GetUserById")]
+        public async Task<IHttpActionResult> GetUser(string Id)
+        {
+            var user = await this.AppUserManager.FindByIdAsync(Id);
+
+            if (user != null)
+            {
+                return Ok(this.TheModelFactory.Create(user));
+            }
+
+            return NotFound();
+
+        }
+
+        [Route("user/{username}")]
+        public async Task<IHttpActionResult> GetUserByName(string username)
+        {
+            var user = await this.AppUserManager.FindByNameAsync(username);
+
+            if (user != null)
+            {
+                return Ok(this.TheModelFactory.Create(user));
+            }
+
+            return NotFound();
+
+        }
+
+
+        
 
         public ISecureDataFormat<AuthenticationTicket> AccessTokenFormat { get; private set; }
 

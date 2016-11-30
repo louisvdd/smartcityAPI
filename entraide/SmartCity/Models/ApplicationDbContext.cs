@@ -39,6 +39,5 @@ namespace SmartCity.Models
 
         public System.Data.Entity.DbSet<SmartCity.Models.Service> Services { get; set; }
 
-        public System.Data.Entity.DbSet<SmartCity.Models.GetService> GetServices { get; set; }
     }
 }

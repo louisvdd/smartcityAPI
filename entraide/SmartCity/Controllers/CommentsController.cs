@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using SmartCity.Models;
+using SmartCity.Controllers;
 
 namespace SmartCity.Controllers
 {
@@ -35,6 +36,24 @@ namespace SmartCity.Controllers
 
             return Ok(comment);
         }
+
+        //[ResponseType(typeof(Comment))]
+        //public async Task<IHttpActionResult> GetCommentOfUser(string id)
+        //{
+
+        //    //var comments = await 
+        //    /*
+        //     * Select * from Comment comment, Doservice doService, User user
+        //     * where comment.commentId = doService.CommentIdFk
+        //     * and doSevice.UserFk = user.userId
+        //     * 
+        //     * */
+        //    var comments = from comment in db.Comments                          
+        //                   where db.DoServices.Where(u => u.UserDoService.Id == id) && comment.Id == db.DoServices.Where(u => u.CommentOfService.Id) 
+        //                   select comment;
+        //    //db.DoServices.Where(u => u.UserDoService.Id == id);
+            
+        //}
 
         // PUT: api/Comments/5
         [ResponseType(typeof(void))]

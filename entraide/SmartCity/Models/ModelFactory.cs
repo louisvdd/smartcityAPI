@@ -11,21 +11,14 @@ namespace SmartCity.Models
     {
         private UrlHelper _UrlHelper;
         private ApplicationUserManager _AppUserManager;
-        private HttpRequestMessage request;
-        private SmartCity.ApplicationUserManager appUserManager;
-
+      
         public ModelFactory(HttpRequestMessage request, ApplicationUserManager appUserManager)
         {
             _UrlHelper = new UrlHelper(request);
             _AppUserManager = appUserManager;
         }
 
-        public ModelFactory(HttpRequestMessage request, SmartCity.ApplicationUserManager appUserManager)
-        {
-            this.request = request;
-            this.appUserManager = appUserManager;
-        }
-
+        
         public UserReturnModel Create(ApplicationUser appUser)
         {
             return new UserReturnModel

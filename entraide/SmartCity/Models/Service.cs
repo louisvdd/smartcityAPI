@@ -19,7 +19,7 @@ namespace SmartCity.Models
         public bool serviceDone { get; set; }
 
         //ForeignKey
-        [Required]
+
         public ApplicationUser UserNeedService { get; set; }
         [Required]
         public CategoryService Category { get; set; }
