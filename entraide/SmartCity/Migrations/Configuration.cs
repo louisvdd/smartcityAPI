@@ -78,7 +78,7 @@ namespace SmartCity.Migrations
 
             manager.Create(user1, "augu12");
             manager.Create(user2, "choupi12");
-            manager.Create(admin, "admin");
+            manager.Create(admin, "admin12");
             /*CategoryService categoryService1 = new CategoryService()
             {
                 Id = 1,

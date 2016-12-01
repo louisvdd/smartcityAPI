@@ -308,3 +308,6 @@ D:\GitHub\smartcityAPI2\entraide\SmartCity.test\bin\Debug\fr\Microsoft.VisualStu
 D:\GitHub\smartcityAPI2\entraide\SmartCity.test\obj\Debug\SmartCity.test.csprojResolveAssemblyReference.cache
 D:\GitHub\smartcityAPI2\entraide\SmartCity.test\obj\Debug\SmartCity.test.dll
 D:\GitHub\smartcityAPI2\entraide\SmartCity.test\obj\Debug\SmartCity.test.pdb
+D:\GitHub\smartcityAPI\entraide\SmartCity.test\bin\Debug\Microsoft.Owin.Cors.dll
+D:\GitHub\smartcityAPI\entraide\SmartCity.test\bin\Debug\System.Web.Cors.dll
+D:\GitHub\smartcityAPI\entraide\SmartCity.test\bin\Debug\Microsoft.Owin.Cors.xml

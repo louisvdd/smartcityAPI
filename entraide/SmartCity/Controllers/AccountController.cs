@@ -379,7 +379,10 @@ namespace SmartCity.Controllers
                 PostalCode = model.PostalCode,
                 City = model.City,
                 Country = model.Country,
-                Category = model.Category
+                Category = model.Category,
+                DateInscription = Convert.ToDateTime(model.DateInscription),
+                NumGetService = 0,
+                NumServiceGive = 0
 
             };
 
@@ -444,34 +447,34 @@ namespace SmartCity.Controllers
             get { return Request.GetOwinContext().Authentication; }
         }
 
-        private IHttpActionResult GetErrorResult(IdentityResult result)
-        {
-            if (result == null)
-            {
-                return InternalServerError();
-            }
+        //private IHttpActionResult GetErrorResult(IdentityResult result)
+        //{
+        //    if (result == null)
+        //    {
+        //        return InternalServerError();
+        //    }
 
-            if (!result.Succeeded)
-            {
-                if (result.Errors != null)
-                {
-                    foreach (string error in result.Errors)
-                    {
-                        ModelState.AddModelError("", error);
-                    }
-                }
+        //    if (!result.Succeeded)
+        //    {
+        //        if (result.Errors != null)
+        //        {
+        //            foreach (string error in result.Errors)
+        //            {
+        //                ModelState.AddModelError("", error);
+        //            }
+        //        }
 
-                if (ModelState.IsValid)
-                {
-                    // No ModelState errors are available to send, so just return an empty BadRequest.
-                    return BadRequest();
-                }
+        //        if (ModelState.IsValid)
+        //        {
+        //            // No ModelState errors are available to send, so just return an empty BadRequest.
+        //            return BadRequest();
+        //        }
 
-                return BadRequest(ModelState);
-            }
+        //        return BadRequest(ModelState);
+        //    }
 
-            return null;
-        }
+        //    return null;
+        //}
 
         private class ExternalLoginData
         {

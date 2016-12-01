@@ -44,15 +44,12 @@ namespace SmartCity.Controllers
         //    //var comments = await 
         //    /*
         //     * Select * from Comment comment, Doservice doService, User user
-        //     * where comment.commentId = doService.CommentIdFk
-        //     * and doSevice.UserFk = user.userId
+        //     * where doSevice.UserFk = user.userId
+        //     * and  doService.CommentOfService != null
         //     * 
-        //     * */
-        //    var comments = from comment in db.Comments                          
-        //                   where db.DoServices.Where(u => u.UserDoService.Id == id) && comment.Id == db.DoServices.Where(u => u.CommentOfService.Id) 
-        //                   select comment;
+        //     * */            
         //    //db.DoServices.Where(u => u.UserDoService.Id == id);
-            
+
         //}
 
         // PUT: api/Comments/5

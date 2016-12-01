@@ -65,7 +65,14 @@ namespace SmartCity.Models
         [Required]
         public string Country { get; set; }
         [Required]
-        public string Category { get; set; }       
+        public string Category { get; set; }
+        public string DateInscription { get; set; }
+
+        public int NumGetService { get; set; }
+
+        public int NumServiceGive { get; set; }
+
+        public virtual ICollection<Service> ServicesNeeded { get; set; }
     }
 
     public class RegisterExternalBindingModel
