@@ -14,7 +14,8 @@ namespace SmartCity.Models
         public string CommentDescription { get; set; }
         [Required]
         public double Rating { get; set; }
-
+        [Required]
+        public DoService ServiceComment { get; set; }
         
     }
 }

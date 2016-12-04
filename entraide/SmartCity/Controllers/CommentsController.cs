@@ -37,20 +37,20 @@ namespace SmartCity.Controllers
             return Ok(comment);
         }
 
-        //[ResponseType(typeof(Comment))]
-        //public async Task<IHttpActionResult> GetCommentOfUser(string id)
-        //{
+        [ResponseType(typeof(Comment))]
+        public async IQueryable<Comment> GetCommentOfUser(string id)
+        {
 
-        //    //var comments = await 
-        //    /*
-        //     * Select * from Comment comment, Doservice doService, User user
-        //     * where doSevice.UserFk = user.userId
-        //     * and  doService.CommentOfService != null
-        //     * 
-        //     * */            
-        //    //db.DoServices.Where(u => u.UserDoService.Id == id);
+            //var comments = await 
+            /*
+             * Select * from Comment comment, Doservice doService, User user
+             * where doSevice.UserFk = user.userId
+             * and  doService.CommentOfService != null
+             * 
+             * */
+             IQueryable<Comment> comments = await db.Comments.Where(u => u.DoServiceComment.UserDoService.Id == id);
 
-        //}
+        }
 
         // PUT: api/Comments/5
         [ResponseType(typeof(void))]
