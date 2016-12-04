@@ -66,6 +66,9 @@ namespace SmartCity.Models
         public string Country { get; set; }
         [Required]
         public string Category { get; set; }
+        //[Required]
+        //public string PhoneNumber { get; set; }
+
         public string DateInscription { get; set; }
 
         public int NumGetService { get; set; }

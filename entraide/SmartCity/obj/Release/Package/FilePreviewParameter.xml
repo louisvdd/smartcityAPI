@@ -4,7 +4,7 @@
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\GitHub\\smartcityAPI\\entraide\\SmartCity\\obj\\Release\\Package\\PackageTmp$" />
     <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\GitHub\\smartcityAPI\\entraide\\SmartCity\\obj\\Release\\Package\\PackageTmp$" />
   </parameter>
-  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:g-aideserver.database.windows.net,1433;Initial Catalog=G-aideDataBase;User ID=sponcho@g-aideserver;Password=Beguinvdd123" tags="">
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=g-aideserver.database.windows.net;Initial Catalog=G-aideDataBase;Integrated Security=False;User ID=sponcho;Password=Beguinvdd123;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" tags="">
     <parameterEntry kind="XmlFile" scope="D:\\GitHub\\smartcityAPI\\entraide\\SmartCity\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
 </parameters>

@@ -37,8 +37,8 @@ namespace SmartCity.Controllers
             return Ok(comment);
         }
 
-        [ResponseType(typeof(Comment))]
-        public async IQueryable<Comment> GetCommentOfUser(string id)
+        [ResponseType(typeof(IQueryable<Comment>))]
+        public IQueryable<Comment> GetCommentOfUser(string id)
         {
 
             //var comments = await 
@@ -48,8 +48,8 @@ namespace SmartCity.Controllers
              * and  doService.CommentOfService != null
              * 
              * */
-             IQueryable<Comment> comments = await db.Comments.Where(u => u.DoServiceComment.UserDoService.Id == id);
-
+            IQueryable<Comment> comments = db.Comments.Where(u => u.DoServiceComment.UserDoService.Id == id);
+            return comments;
         }
 
         // PUT: api/Comments/5

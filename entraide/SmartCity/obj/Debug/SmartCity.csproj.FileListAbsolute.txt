@@ -518,5 +518,5 @@ C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csproj.GenerateRe
 D:\GitHub\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.dll
 D:\GitHub\smartcityAPI\entraide\SmartCity\bin\System.Web.Cors.dll
 D:\GitHub\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.xml
-D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.augu.resources
+D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.initialCreate.resources
 D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csproj.GenerateResource.Cache

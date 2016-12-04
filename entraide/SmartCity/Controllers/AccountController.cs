@@ -377,6 +377,7 @@ namespace SmartCity.Controllers
                 Street = model.Street,
                 Number =  model.Number,
                 PostalCode = model.PostalCode,
+                //PhoneNumber = model.PhoneNumber,
                 City = model.City,
                 Country = model.Country,
                 Category = model.Category,

@@ -407,5 +407,5 @@ D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\vbc.rsp
 D:\GitHub\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.dll
 D:\GitHub\smartcityAPI\entraide\SmartCity\bin\System.Web.Cors.dll
 D:\GitHub\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.xml
-D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Release\SmartCity.Migrations.augu.resources
 D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Release\SmartCity.csproj.GenerateResource.Cache
+D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Release\SmartCity.Migrations.initialCreate.resources
