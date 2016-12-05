@@ -16,12 +16,15 @@ namespace SmartCity.Models
         [Required]
         public DateTime DatePublicationService { get; set; }
         [Required]
-        public bool serviceDone { get; set; }
+        public bool ServiceDone { get; set; }
 
         //ForeignKey
 
+        [Required]
         public ApplicationUser UserNeedService { get; set; }
         [Required]
         public CategoryService Category { get; set; }
+
+        public virtual DoService doService { get; set; }
     }
 }

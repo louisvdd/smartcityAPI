@@ -246,18 +246,20 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\CategoryServicesController.cs" />
+    <Compile Include="Controllers\CommentOfUsersController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\DoServicesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DbInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612041320324_initialCreate.cs" />
-    <Compile Include="Migrations\201612041320324_initialCreate.Designer.cs">
-      <DependentUpon>201612041320324_initialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201612051130085_Initial.cs" />
+    <Compile Include="Migrations\201612051130085_Initial.Designer.cs">
+      <DependentUpon>201612051130085_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -363,8 +365,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201612041320324_initialCreate.resx">
-      <DependentUpon>201612041320324_initialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612051130085_Initial.resx">
+      <DependentUpon>201612051130085_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

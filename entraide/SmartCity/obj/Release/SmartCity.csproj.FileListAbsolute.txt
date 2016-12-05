@@ -386,9 +386,6 @@ C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.dll
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\System.Web.Cors.dll
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.xml
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Release\SmartCity.Migrations.InitialCreate.resources
-C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Release\SmartCity.Migrations.BugTest.resources
-C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Release\SmartCity.Migrations.Test.resources
-C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Release\SmartCity.Migrations.FinalHope.resources
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Release\SmartCity.csproj.GenerateResource.Cache
 D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\csc.exe.config
 D:\GitHub\smartcityAPI\entraide\SmartCity\bin\roslyn\csc.rsp

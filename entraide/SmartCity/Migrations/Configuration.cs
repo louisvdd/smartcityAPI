@@ -79,25 +79,27 @@ namespace SmartCity.Migrations
             manager.Create(user1, "augu12");
             manager.Create(user2, "choupi12");
             manager.Create(admin, "admin12");
-            /*CategoryService categoryService1 = new CategoryService()
+
+            CategoryService categoryService1 = new CategoryService()
             {
                 Id = 1,
                 Label = "Jardinage"
             };
             context.CategoryServices.AddOrUpdate(categoryService1);
-            Comment comment1 = new Comment()
+            /*Comment comment1 = new Comment()
             {
                 Id = 1,
                 CommentDescription = "augu",
                 Rating = 3.5
             };
-            context.Comments.AddOrUpdate(comment1);
-            context.SaveChanges();
-            /*Service service1 = new Service()
+            context.Comments.AddOrUpdate(comment1);*/
+            
+            Service service1 = new Service()
             {
                 Id = 1,
                 DescriptionService = "Bonjour j'aimerais que quelqu'un tonde mon jardin",
                 Category = categoryService1,
+                ServiceDone = false,
                 DatePublicationService = DateTime.Now,
                 UserNeedService = user1
 
@@ -114,7 +116,12 @@ namespace SmartCity.Migrations
 
 
             };
-            context.DoServices.Add(doService1);*/
+            context.DoServices.Add(doService1);
+            context.SaveChanges();*/
         }
+
+       
     }
+
+    
 }

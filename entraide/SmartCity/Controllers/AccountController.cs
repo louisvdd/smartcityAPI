@@ -23,14 +23,22 @@ namespace SmartCity.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]
-    public class AccountController : BaseApiController
-    {  
-        private const string LocalLoginProvider = "Local";
-        private ApplicationUserManager _userManager;
-
+    public class AccountController : ApiController
+    {
+        private ModelFactory _modelFactory;
+        protected ModelFactory TheModelFactory
+        {
+            get
+            {
+                if (_modelFactory == null)
+                {
+                    _modelFactory = new ModelFactory(this.Request, this.UserManager);
+                }
+                return _modelFactory;
+            }
+        }
         public AccountController()
         {
-
         }
 
         public AccountController(ApplicationUserManager userManager,
@@ -39,7 +47,8 @@ namespace SmartCity.Controllers
             UserManager = userManager;
             AccessTokenFormat = accessTokenFormat;
         }
-
+        private const string LocalLoginProvider = "Local";
+        private ApplicationUserManager _userManager;
         public ApplicationUserManager UserManager
         {
             get
@@ -52,6 +61,18 @@ namespace SmartCity.Controllers
             }
         }
 
+        //public ApplicationUserManager UserManager
+        //{
+        //    get
+        //    {
+        //        return _userManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+        //    }
+        //    private set
+        //    {
+        //        _userManager = value;
+        //    }
+        //}
+
         [Route("users")]
         public IHttpActionResult GetUsers()
         {
@@ -61,7 +82,7 @@ namespace SmartCity.Controllers
         [Route("user/{id:guid}", Name = "GetUserById")]
         public async Task<IHttpActionResult> GetUser(string Id)
         {
-            var user = await this.AppUserManager.FindByIdAsync(Id);
+            var user = await this.UserManager.FindByIdAsync(Id);
 
             if (user != null)
             {
@@ -71,23 +92,6 @@ namespace SmartCity.Controllers
             return NotFound();
 
         }
-
-        [Route("user/{username}")]
-        public async Task<IHttpActionResult> GetUserByName(string username)
-        {
-            var user = await this.AppUserManager.FindByNameAsync(username);
-
-            if (user != null)
-            {
-                return Ok(this.TheModelFactory.Create(user));
-            }
-
-            return NotFound();
-
-        }
-
-
-        
 
         public ISecureDataFormat<AuthenticationTicket> AccessTokenFormat { get; private set; }
 
@@ -165,7 +169,7 @@ namespace SmartCity.Controllers
 
             IdentityResult result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword,
                 model.NewPassword);
-            
+
             if (!result.Succeeded)
             {
                 return GetErrorResult(result);
@@ -298,9 +302,9 @@ namespace SmartCity.Controllers
             if (hasRegistered)
             {
                 Authentication.SignOut(DefaultAuthenticationTypes.ExternalCookie);
-                
-                 ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
-                    OAuthDefaults.AuthenticationType);
+
+                ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
+                   OAuthDefaults.AuthenticationType);
                 ClaimsIdentity cookieIdentity = await user.GenerateUserIdentityAsync(UserManager,
                     CookieAuthenticationDefaults.AuthenticationType);
 
@@ -375,9 +379,9 @@ namespace SmartCity.Controllers
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Street = model.Street,
-                Number =  model.Number,
+                Number = model.Number,
                 PostalCode = model.PostalCode,
-                //PhoneNumber = model.PhoneNumber,
+                PhoneNumber = model.PhoneNumber,
                 City = model.City,
                 Country = model.Country,
                 Category = model.Category,
@@ -425,21 +429,11 @@ namespace SmartCity.Controllers
             result = await UserManager.AddLoginAsync(user.Id, info.Login);
             if (!result.Succeeded)
             {
-                return GetErrorResult(result); 
+                return GetErrorResult(result);
             }
             return Ok();
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && _userManager != null)
-            {
-                _userManager.Dispose();
-                _userManager = null;
-            }
-
-            base.Dispose(disposing);
-        }
 
         #region Helpers
 
@@ -547,5 +541,38 @@ namespace SmartCity.Controllers
         }
 
         #endregion
+
+
+
+
+
+        protected IHttpActionResult GetErrorResult(IdentityResult result)
+        {
+            if (result == null)
+            {
+                return InternalServerError();
+            }
+
+            if (!result.Succeeded)
+            {
+                if (result.Errors != null)
+                {
+                    foreach (string error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error);
+                    }
+                }
+
+                if (ModelState.IsValid)
+                {
+                    // No ModelState errors are available to send, so just return an empty BadRequest.
+                    return BadRequest();
+                }
+
+                return BadRequest(ModelState);
+            }
+
+            return null;
+        }
     }
 }

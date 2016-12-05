@@ -1,14 +1,16 @@
-﻿using System;
+﻿using SmartCity.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace BankApi.Controllers
 {
     [Authorize]
-    public class ValuesController : ApiController
+    public class ValuesController : BaseApiController
     {
         private static List<string> values = new List<string> { "value1", "value2" };
         // GET api/values
@@ -40,5 +42,7 @@ namespace BankApi.Controllers
         {
             values.RemoveAt(id);
         }
+
+     
     }
 }

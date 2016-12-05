@@ -26,6 +26,7 @@ namespace SmartCity.Models
                 Url = _UrlHelper.Link("GetUserById", new { id = appUser.Id }),
                 Id = appUser.Id,
                 UserName = appUser.UserName,
+                LastName = appUser.LastName,
                 FirstName = appUser.FirstName,
                 Street = appUser.Street,
                 Number = appUser.Number,
@@ -38,7 +39,8 @@ namespace SmartCity.Models
                 NumServiceGive = appUser.NumServiceGive,
                 Email = appUser.Email,
                 EmailConfirmed = appUser.EmailConfirmed,
-                ServicesNeeded = appUser.ServicesNeeded
+                ServicesNeeded = appUser.ServicesNeeded,
+                PhoneNumber = appUser.PhoneNumber
             };
         }
     }
@@ -61,6 +63,7 @@ namespace SmartCity.Models
         public int NumServiceGive { get; set; }
         public string Email { get; set; }
         public bool EmailConfirmed { get; set; }
+        public string PhoneNumber { get; set; }
         public virtual ICollection<Service> ServicesNeeded { get; set; }
     }
 }

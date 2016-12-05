@@ -13,31 +13,37 @@ namespace SmartCity.Controllers
     public class BaseApiController : ApiController
     {
         private ModelFactory _modelFactory;
-        private ApplicationUserManager _AppUserManager = null;
-
-        protected ApplicationUserManager AppUserManager
-        {
-            get
-            {
-                return _AppUserManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            }
-        }
-
-        public BaseApiController()
-        {
-        }
-
         protected ModelFactory TheModelFactory
         {
             get
             {
                 if (_modelFactory == null)
                 {
-                    _modelFactory = new ModelFactory(this.Request, this.AppUserManager);
+                    _modelFactory = new ModelFactory(this.Request, this.UserManager);
                 }
                 return _modelFactory;
             }
         }
+        private ApplicationUserManager userManager;
+
+        protected ApplicationUserManager UserManager
+        {
+            get
+            {
+                return userManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            }
+        }
+
+        public BaseApiController() : base()
+        {
+        }
+
+        public BaseApiController(ApplicationUserManager userManager)
+        {
+            this.userManager = userManager;
+        }
+
+     
 
         protected IHttpActionResult GetErrorResult(IdentityResult result)
         {

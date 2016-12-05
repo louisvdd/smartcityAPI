@@ -1,7 +1,8 @@
-﻿/*using System;
+﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Data.Entity;
 using SmartCity.Models;
+using SmartCity.Migrations;
 using System.Linq;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity;
@@ -17,28 +18,29 @@ namespace SmartCity.test
         }
 
         [TestMethod]
-        public void CanGetCustomers()
+        public void CanSetService()
         {
-           // Database.SetInitializer(new DbInitializer());
-
-            //using (var context = GetContext())
-            //{
-            //    context.Database.Initialize(true);
-            //    Assert.AreEqual(2, context.Users.ToList().Count);
-            //}
-        }
-
-        [TestMethod]
-        public void SeedWorks()
-        {
-            using (var context = GetContext())
+            ApplicationDbContext context = GetContext();
+            CategoryService categoryService1 = new CategoryService()
             {
-                SmartCity.Migrations.Configuration config = new Migrations.Configuration();
-                config.CreateUsers(context);
+                Id = 1,
+                Label = "Jardinage"
+            };
+            Service service1 = new Service()
+            {
+                Id = 1,
+                DescriptionService = "Bonjour j'aimerais que quelqu'un tonde mon jardin",
+                Category = categoryService1,
+                ServiceDone = false,
+                DatePublicationService = DateTime.Now,
+                UserNeedService = context.Users.First()
 
-                Assert.AreEqual(2, context.Users.Count());
+            };
+            context.Services.Add(service1);
+            context.SaveChanges();
 
-            }
         }
+
+
     }
-}*/
+}

@@ -26,46 +26,7 @@ namespace SmartCity
                 Rating = 3.5
             };
             context.Comments.Add(comment1);
-
-            ApplicationUser user1 = new ApplicationUser()
-            {
-                Id = "1",
-                FirstName = "Marcoty",
-                LastName = "Justin",
-                Street = "rue du bouvreuil",
-                Number = 13,
-                PostalCode = 6001,
-                City = "Marcinelle",
-                Country = "Belgique",
-                //AdressMail = "coucou@plazzor.be",
-                PhoneNumber = "0498666666",
-                Category = "young",
-                //Password = "augu",
-                DateInscription = DateTime.Now,
-                NumGetService = 0,
-                NumServiceGive = 0,
-                
-            };
-            context.Users.Add(user1);
-            ApplicationUser user2 = new ApplicationUser()
-            {
-                Id = "2",
-                FirstName = "Michiels",
-                LastName = "Mélina",
-                Street = "rue des choupi",
-                Number = 14,
-                PostalCode = 5100,
-                City = "Choupi",
-                //AdressMail = "choupi@hotmail.com",
-                PhoneNumber = "0495197435",
-                Country = "Belgique",
-                Category = "young",
-                //Password = "choupi",
-                DateInscription = DateTime.Now,
-                NumGetService = 0,
-                NumServiceGive = 0
-            };
-            context.Users.Add(user2);
+            
             Service service1 = new Service()
             {
                 Id = 1,
@@ -91,4 +52,5 @@ namespace SmartCity
             context.SaveChanges();
         }
     }
-}*/
+}
+*/
