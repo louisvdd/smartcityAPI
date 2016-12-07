@@ -13,7 +13,7 @@ namespace SmartCity.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201612051130085_Initial"; }
+            get { return "201612071333289_Initial"; }
         }
         
         string IMigrationMetadata.Source

@@ -47,9 +47,11 @@ namespace SmartCity.Migrations
                 c => new
                     {
                         Id = c.Long(nullable: false, identity: true),
+                        Label = c.String(nullable: false),
                         DescriptionService = c.String(nullable: false),
                         DatePublicationService = c.DateTime(nullable: false),
                         ServiceDone = c.Boolean(nullable: false),
+                        RowVersion = c.Binary(nullable: false, fixedLength: true, timestamp: true, storeType: "rowversion"),
                         Category_Id = c.Long(nullable: false),
                         UserNeedService_Id = c.String(nullable: false, maxLength: 128),
                     })

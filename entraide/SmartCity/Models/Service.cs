@@ -11,8 +11,10 @@ namespace SmartCity.Models
         [Key]
         public long Id { get; set; }
         [Required]
+        public string Label { get; set; }
+        [Required]
         public string DescriptionService { get; set; }
-
+        
         [Required]
         public DateTime DatePublicationService { get; set; }
         [Required]
@@ -26,5 +28,8 @@ namespace SmartCity.Models
         public CategoryService Category { get; set; }
 
         public virtual DoService doService { get; set; }
+
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
     }
 }

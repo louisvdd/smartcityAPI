@@ -1,4 +1,4 @@
-﻿/*using SmartCity.Models;
+﻿using SmartCity.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace SmartCity
 {
-    public class DbInitializer : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
+    public class DbInitializer : DropCreateDatabaseAlways<ApplicationDbContext>
     { 
-         protected override void Seed(ApplicationDbContext context)
+        /* protected override void Seed(ApplicationDbContext context)
          {
             CategoryService categoryService1 = new CategoryService()
             {
@@ -50,7 +50,6 @@ namespace SmartCity
             };
             context.DoServices.Add(doService1);
             context.SaveChanges();
-        }
+        }*/
     }
 }
-*/

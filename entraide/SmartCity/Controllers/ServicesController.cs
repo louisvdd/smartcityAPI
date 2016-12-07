@@ -20,7 +20,7 @@ namespace SmartCity.Controllers
         // GET: api/Services
         public IQueryable<Service> GetServices()
         {
-            return db.Services;
+            return db.Services.Include(c => c.Category).ToList().AsQueryable();
         }
 
         // GET: api/Services/5

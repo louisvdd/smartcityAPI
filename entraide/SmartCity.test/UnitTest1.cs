@@ -18,27 +18,12 @@ namespace SmartCity.test
         }
 
         [TestMethod]
-        public void CanSetService()
+        public void CanCreateDB()
         {
-            ApplicationDbContext context = GetContext();
-            CategoryService categoryService1 = new CategoryService()
-            {
-                Id = 1,
-                Label = "Jardinage"
-            };
-            Service service1 = new Service()
-            {
-                Id = 1,
-                DescriptionService = "Bonjour j'aimerais que quelqu'un tonde mon jardin",
-                Category = categoryService1,
-                ServiceDone = false,
-                DatePublicationService = DateTime.Now,
-                UserNeedService = context.Users.First()
-
-            };
-            context.Services.Add(service1);
-            context.SaveChanges();
-
+            Database.SetInitializer(new DbInitializer());
+            var context = GetContext();
+            SmartCity.Migrations.Configuration config = new Migrations.Configuration();
+            config.SeedDb(context);
         }
 
 

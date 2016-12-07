@@ -8,7 +8,7 @@ namespace SmartCity.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SmartCity.Models.ApplicationDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<SmartCity.Models.ApplicationDbContext>
     {
         public Configuration()
         {
@@ -17,6 +17,10 @@ namespace SmartCity.Migrations
 
         protected override void Seed(SmartCity.Models.ApplicationDbContext context)
         {
+
+        }
+        public void SeedDb(ApplicationDbContext context)
+        {  
             var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
 
             ApplicationUser user1 = new ApplicationUser()
@@ -80,44 +84,79 @@ namespace SmartCity.Migrations
             manager.Create(user2, "choupi12");
             manager.Create(admin, "admin12");
 
-            CategoryService categoryService1 = new CategoryService()
+            CategoryService jardinage = new CategoryService()
             {
                 Id = 1,
                 Label = "Jardinage"
             };
-            context.CategoryServices.AddOrUpdate(categoryService1);
-            /*Comment comment1 = new Comment()
+            context.CategoryServices.AddOrUpdate(jardinage);
+            CategoryService couture = new CategoryService()
             {
-                Id = 1,
-                CommentDescription = "augu",
-                Rating = 3.5
+                Id = 2,
+                Label = "Couture"
             };
-            context.Comments.AddOrUpdate(comment1);*/
-            
+            context.CategoryServices.AddOrUpdate(couture);
+            CategoryService bricolage = new CategoryService()
+            {
+                Id = 3,
+                Label = "Bricolage"
+            };
+            context.CategoryServices.AddOrUpdate(bricolage);
+            CategoryService cuisine = new CategoryService()
+            {
+                Id = 4,
+                Label = "Cuisine"
+            };
+            context.CategoryServices.AddOrUpdate(cuisine);
+
+
+
             Service service1 = new Service()
             {
                 Id = 1,
+                Label = "Tonte de pelouse",
                 DescriptionService = "Bonjour j'aimerais que quelqu'un tonde mon jardin",
-                Category = categoryService1,
+                Category = jardinage,
                 ServiceDone = false,
                 DatePublicationService = DateTime.Now,
                 UserNeedService = user1
 
             };
             context.Services.Add(service1);
-            /*
+
+
+            Service service2 = new Service()
+            {
+                Id = 2,
+                Label = "Réparation pull",
+                DescriptionService = "Bonjour j'aimerais que quelqu'un puisse réparer mon pull préféré",
+                Category = couture,
+                ServiceDone = false,
+                DatePublicationService = DateTime.Now,
+                UserNeedService = user2
+            };
+            context.Services.Add(service2);
+
             DoService doService1 = new DoService()
             {
                 Id = 1,
                 DateService = new DateTime(2016, 12, 15),
                 UserDoService = user1,
                 ServiceDone = service1,
-                CommentOfService = comment1
-
-
+                
+                
             };
             context.DoServices.Add(doService1);
-            context.SaveChanges();*/
+
+            Comment comment1 = new Comment()
+            {
+                Id = 1,
+                CommentDescription = "augu",
+                Rating = 3.5,
+                DoServiceComment = doService1
+            };
+            context.Comments.AddOrUpdate(comment1);
+            context.SaveChanges();
         }
 
        
