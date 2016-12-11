@@ -69,7 +69,7 @@ namespace SmartCity.Models
         [Required]
         public string PhoneNumber { get; set; }
 
-        public string DateInscription { get; set; }
+        public DateTime DateInscription { get; set; }
 
         public int NumGetService { get; set; }
 

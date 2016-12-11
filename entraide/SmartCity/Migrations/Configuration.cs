@@ -89,25 +89,25 @@ namespace SmartCity.Migrations
                 Id = 1,
                 Label = "Jardinage"
             };
-            context.CategoryServices.AddOrUpdate(jardinage);
+            context.CategoryServices.Add(jardinage);
             CategoryService couture = new CategoryService()
             {
                 Id = 2,
                 Label = "Couture"
             };
-            context.CategoryServices.AddOrUpdate(couture);
+            context.CategoryServices.Add(couture);
             CategoryService bricolage = new CategoryService()
             {
                 Id = 3,
                 Label = "Bricolage"
             };
-            context.CategoryServices.AddOrUpdate(bricolage);
+            context.CategoryServices.Add(bricolage);
             CategoryService cuisine = new CategoryService()
             {
                 Id = 4,
                 Label = "Cuisine"
             };
-            context.CategoryServices.AddOrUpdate(cuisine);
+            context.CategoryServices.Add(cuisine);
 
 
 
@@ -137,16 +137,47 @@ namespace SmartCity.Migrations
             };
             context.Services.Add(service2);
 
+            Service service3 = new Service()
+            {
+                Id = 3,
+                Label = "Réparation chausettes",
+                DescriptionService = "Bonjour j'aimerais que quelqu'un puisse réparer mes chaussettes",
+                Category = couture,
+                ServiceDone = false,
+                DatePublicationService = DateTime.Now,
+                UserNeedService = user2
+            };
+            context.Services.Add(service3);
+
+            Service service4 = new Service()
+            {
+                Id = 2,
+                Label = "J'ai faim",
+                DescriptionService = "Bonjour j'aimerais que quelqu'un puisse me preparer un bon repas",
+                Category = cuisine,
+                ServiceDone = false,
+                DatePublicationService = DateTime.Now,
+                UserNeedService = user1
+            };
+            context.Services.Add(service4);
+
             DoService doService1 = new DoService()
             {
                 Id = 1,
                 DateService = new DateTime(2016, 12, 15),
                 UserDoService = user1,
-                ServiceDone = service1,
-                
-                
+                ServiceDone = service1                          
             };
             context.DoServices.Add(doService1);
+
+            DoService doService2 = new DoService()
+            {
+                Id = 2,
+                DateService = new DateTime(2016, 12, 15),
+                ServiceDone = service4,                
+                UserDoService = user2,
+            };
+            context.DoServices.Add(doService2);
 
             Comment comment1 = new Comment()
             {
@@ -155,7 +186,7 @@ namespace SmartCity.Migrations
                 Rating = 3.5,
                 DoServiceComment = doService1
             };
-            context.Comments.AddOrUpdate(comment1);
+            context.Comments.Add(comment1);
             context.SaveChanges();
         }
 

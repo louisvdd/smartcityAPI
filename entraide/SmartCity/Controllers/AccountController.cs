@@ -385,7 +385,7 @@ namespace SmartCity.Controllers
                 City = model.City,
                 Country = model.Country,
                 Category = model.Category,
-                DateInscription = Convert.ToDateTime(model.DateInscription),
+                DateInscription = DateTime.Now,
                 NumGetService = 0,
                 NumServiceGive = 0
 

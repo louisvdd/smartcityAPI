@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using SmartCity.Models;
-using SmartCity.Controllers;
 
 namespace SmartCity.Controllers
 {
@@ -35,21 +34,6 @@ namespace SmartCity.Controllers
             }
 
             return Ok(comment);
-        }
-
-        [ResponseType(typeof(IQueryable<Comment>))]
-        public IQueryable<Comment> GetCommentOfUser(string id)
-        {
-
-            //var comments = await 
-            /*
-             * Select * from Comment comment, Doservice doService, User user
-             * where doSevice.UserFk = user.userId
-             * and  doService.CommentOfService != null
-             * 
-             * */
-            IQueryable<Comment> comments = db.Comments.Where(u => u.DoServiceComment.UserDoService.Id == id);
-            return comments;
         }
 
         // PUT: api/Comments/5
@@ -97,7 +81,22 @@ namespace SmartCity.Controllers
             }
 
             db.Comments.Add(comment);
-            await db.SaveChangesAsync();
+
+            try
+            {
+                await db.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (CommentExists(comment.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
             return CreatedAtRoute("DefaultApi", new { id = comment.Id }, comment);
         }
