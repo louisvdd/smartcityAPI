@@ -519,3 +519,4 @@ C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csproj.GenerateRe
 D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.Initial.resources
 D:\GitHub\smartcityAPI\entraide\SmartCity\bin\ApplicationInsights.config
 D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.test.resources
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\ApplicationInsights.config

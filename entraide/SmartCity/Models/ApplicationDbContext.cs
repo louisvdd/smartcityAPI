@@ -24,6 +24,8 @@ namespace SmartCity.Models
                 .HasRequired(s => s.UserNeedService)
                 .WithMany(u => u.ServicesNeeded)
                 .WillCascadeOnDelete(false);
+
+          
         }
 
         public static ApplicationDbContext Create()

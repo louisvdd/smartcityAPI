@@ -15,7 +15,7 @@ namespace SmartCity.Models
         [Required]
         public double Rating { get; set; }
         [Required]
-        public DoService DoServiceComment { get; set; }
+        public virtual DoService DoServiceComment { get; set; }
         
     }
 }

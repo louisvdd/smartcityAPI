@@ -13,7 +13,7 @@ using SmartCity.Models;
 
 namespace SmartCity.Controllers
 {
-    public class ServicesController : ApiController
+    public class ServicesController : BaseApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
@@ -32,7 +32,6 @@ namespace SmartCity.Controllers
             {
                 return NotFound();
             }
-
             return Ok(service);
         }
 
@@ -73,13 +72,24 @@ namespace SmartCity.Controllers
 
         // POST: api/Services
         [ResponseType(typeof(Service))]
-        public async Task<IHttpActionResult> PostService(Service service)
+        public async Task<IHttpActionResult> PostService(ServiceBindingModels serviceModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
+            var userBis = await db.Users.FirstOrDefaultAsync(u=>u.Email == serviceModel.UserNeedService);
+            
+            var service = new Service
+            {
+                Label = serviceModel.Label,
+                DatePublicationService = serviceModel.DatePublicationService,
+                DescriptionService = serviceModel.DescriptionService,
+                ServiceDone = serviceModel.ServiceDone,
+                Category = db.CategoryServices.Find(serviceModel.Category),
+                UserNeedService = userBis
+            };
             db.Services.Add(service);
             await db.SaveChangesAsync();
 

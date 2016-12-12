@@ -289,3 +289,4 @@ D:\GitHub\smartcityAPI\entraide\SmartCity.test\bin\Debug\roslyn\vbc.exe.config
 D:\GitHub\smartcityAPI\entraide\SmartCity.test\bin\Debug\roslyn\vbc.rsp
 D:\GitHub\smartcityAPI\entraide\SmartCity.test\bin\Debug\roslyn\VBCSCompiler.exe
 D:\GitHub\smartcityAPI\entraide\SmartCity.test\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity.test\bin\Debug\ApplicationInsights.config
