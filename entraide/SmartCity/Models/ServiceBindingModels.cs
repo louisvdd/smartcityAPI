@@ -17,6 +17,7 @@ namespace SmartCity.Models
         public DateTime DatePublicationService { get; set; }
         [Required]
         public bool ServiceDone { get; set; }
+
         [Required]
         public string UserNeedService { get; set; }
         [Required]

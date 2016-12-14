@@ -18,10 +18,9 @@ namespace SmartCity.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Services
-        public IQueryable<Service> GetServices([FromUri]string userName)
+        public IQueryable<Service> GetServices()
         {
             return db.Services
-                .Where(c => c.UserNeedService.Email != userName)
                 .Where(c => !c.ServiceDone)
                 .Include(c => c.Category).ToList().AsQueryable();
         }
@@ -47,20 +46,29 @@ namespace SmartCity.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = await db.Users.FirstOrDefaultAsync(u => u.Email == serviceModel.UserNeedService);
-            var service = new Service
+            //var user = await db.Users.FirstOrDefaultAsync(u => u.Email == serviceModel.UserNeedService);
+            //var service = await db.Services.FindAsync(id);
+
+            Service service = await db.Services.Include(c => c.UserNeedService).FirstOrDefaultAsync(s => s.Id == id);        
+            if (id != service.Id)
             {
-                Label = serviceModel.Label,
-                DatePublicationService = serviceModel.DatePublicationService,
-                DescriptionService = serviceModel.DescriptionService,
-                ServiceDone = serviceModel.ServiceDone,
-                Category = db.CategoryServices.Find(serviceModel.Category),
-                UserNeedService = user,
-                RowVersion = db.Services.Find(id).RowVersion
-                
-            };
-            db.Services.
-            db.Entry(service).State = EntityState.Modified;
+                return BadRequest();
+            }
+            service.ServiceDone = serviceModel.ServiceDone;
+            service.Category = db.CategoryServices.Find(serviceModel.Category);
+            //var service = new Service
+            //{
+            //    Label = serviceModel.Label,
+            //    DatePublicationService = serviceModel.DatePublicationService,
+            //    DescriptionService = serviceModel.DescriptionService,
+            //    ServiceDone = serviceModel.ServiceDone,
+            //    Category = db.CategoryServices.Find(serviceModel.Category),
+            //    UserNeedService = user,
+            //    RowVersion = db.Services.Find(id).RowVersion
+
+            //};
+
+            //db.Entry(service).State = EntityState.Modified;
 
             try
             {

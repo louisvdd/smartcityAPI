@@ -520,3 +520,4 @@ D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.Initial
 D:\GitHub\smartcityAPI\entraide\SmartCity\bin\ApplicationInsights.config
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\ApplicationInsights.config
 D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.comment.resources
+C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.comment.resources
