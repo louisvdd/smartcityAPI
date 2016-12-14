@@ -73,12 +73,22 @@ namespace SmartCity.Controllers
 
         // POST: api/DoServices
         [ResponseType(typeof(DoService))]
-        public async Task<IHttpActionResult> PostDoService(DoService doService)
+        public async Task<IHttpActionResult> PostDoService(DoServiceBindingModels doServiceModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+
+            var user = await db.Users.FirstOrDefaultAsync(u => u.Email == doServiceModel.UserDoService);
+            var doService = new DoService
+            {
+                DateService = doServiceModel.DateService,
+                CommentDescription = null,
+                Rating = 0,
+                UserDoService = user,
+                ServiceDone = db.Services.Find(doServiceModel.ServiceDone)
+            };
 
             db.DoServices.Add(doService);
             await db.SaveChangesAsync();

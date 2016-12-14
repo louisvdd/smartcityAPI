@@ -18,9 +18,12 @@ namespace SmartCity.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Services
-        public IQueryable<Service> GetServices()
+        public IQueryable<Service> GetServices([FromUri]string userName)
         {
-            return db.Services.Include(c => c.Category).ToList().AsQueryable();
+            return db.Services
+                .Where(c => c.UserNeedService.Email != userName)
+                .Where(c => !c.ServiceDone)
+                .Include(c => c.Category).ToList().AsQueryable();
         }
 
         // GET: api/Services/5
@@ -37,18 +40,26 @@ namespace SmartCity.Controllers
 
         // PUT: api/Services/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutService(long id, Service service)
+        public async Task<IHttpActionResult> PutService(long id, ServiceBindingModels serviceModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != service.Id)
+            var user = await db.Users.FirstOrDefaultAsync(u => u.Email == serviceModel.UserNeedService);
+            var service = new Service
             {
-                return BadRequest();
-            }
-
+                Label = serviceModel.Label,
+                DatePublicationService = serviceModel.DatePublicationService,
+                DescriptionService = serviceModel.DescriptionService,
+                ServiceDone = serviceModel.ServiceDone,
+                Category = db.CategoryServices.Find(serviceModel.Category),
+                UserNeedService = user,
+                RowVersion = db.Services.Find(id).RowVersion
+                
+            };
+            db.Services.
             db.Entry(service).State = EntityState.Modified;
 
             try
@@ -79,7 +90,7 @@ namespace SmartCity.Controllers
                 return BadRequest(ModelState);
             }
 
-            var userBis = await db.Users.FirstOrDefaultAsync(u=>u.Email == serviceModel.UserNeedService);
+            var user = await db.Users.FirstOrDefaultAsync(u=>u.Email == serviceModel.UserNeedService);
             
             var service = new Service
             {
@@ -88,7 +99,7 @@ namespace SmartCity.Controllers
                 DescriptionService = serviceModel.DescriptionService,
                 ServiceDone = serviceModel.ServiceDone,
                 Category = db.CategoryServices.Find(serviceModel.Category),
-                UserNeedService = userBis
+                UserNeedService = user
             };
             db.Services.Add(service);
             await db.SaveChangesAsync();

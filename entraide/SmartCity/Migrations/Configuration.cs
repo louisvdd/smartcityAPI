@@ -157,7 +157,7 @@ namespace SmartCity.Migrations
                 Category = cuisine,
                 ServiceDone = false,
                 DatePublicationService = DateTime.Now,
-                UserNeedService = user1
+                UserNeedService = user2
             };
             context.Services.Add(service4);
 
@@ -165,8 +165,11 @@ namespace SmartCity.Migrations
             {
                 Id = 1,
                 DateService = new DateTime(2016, 12, 15),
-                UserDoService = user1,
-                ServiceDone = service1                          
+                UserDoService = user2,
+                ServiceDone = service1,
+                CommentDescription = "Commentaire 1",
+                Rating = 3.5
+                                        
             };
             context.DoServices.Add(doService1);
 
@@ -175,18 +178,9 @@ namespace SmartCity.Migrations
                 Id = 2,
                 DateService = new DateTime(2016, 12, 15),
                 ServiceDone = service4,                
-                UserDoService = user2,
+                UserDoService = user1,
             };
             context.DoServices.Add(doService2);
-
-            Comment comment1 = new Comment()
-            {
-                Id = 1,
-                CommentDescription = "augu",
-                Rating = 3.5,
-                DoServiceComment = doService1
-            };
-            context.Comments.Add(comment1);
             context.SaveChanges();
         }
 

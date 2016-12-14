@@ -6,16 +6,19 @@ using System.Web;
 
 namespace SmartCity.Models
 {
-    public class Comment
+    public class DoServiceBindingModels
     {
-        [Key]
-        public long Id { get; set; }
         [Required]
+        public DateTime DateService { get; set; }
+
+        //Commentaire
         public string CommentDescription { get; set; }
-        [Required]
+
         public double Rating { get; set; }
         [Required]
-        public virtual DoService DoServiceComment { get; set; }
-        
+        public string UserDoService { get; set; }
+        [Required]
+        public int ServiceDone { get; set; }
+
     }
 }

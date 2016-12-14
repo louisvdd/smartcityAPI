@@ -8,11 +8,12 @@ namespace SmartCity.Models
 {
     public class ServiceBindingModels
     {
+        [Required]
         public string Label { get; set; }
         [Required]
         public string DescriptionService { get; set; }
 
-        //[Required]
+        [Required]
         public DateTime DatePublicationService { get; set; }
         [Required]
         public bool ServiceDone { get; set; }

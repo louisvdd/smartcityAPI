@@ -13,13 +13,16 @@ namespace SmartCity.Models
         [Required]
         public DateTime DateService { get; set; }
 
+        //Commentaire
+        public string CommentDescription { get; set; }
+
+        public double Rating { get; set; }
         //Foreign Key
         [Required]
         public ApplicationUser UserDoService { get; set; }
         [Required]
         public Service ServiceDone { get; set; }
 
-        public virtual Comment CommentOfService { get; set; }
         
     }
 }

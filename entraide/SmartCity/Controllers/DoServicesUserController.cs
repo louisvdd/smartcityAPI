@@ -11,9 +11,14 @@ namespace SmartCity.Controllers
 
         public IQueryable<DoService> Get([FromUri]string userName)
         {
-            return db.DoServices.Include(c => c.UserDoService).ToList().AsQueryable().Where(d => d.UserDoService.UserName == userName);
+            return db.DoServices
+                    .Include(c => c.UserDoService).Where(d => d.UserDoService.Email == userName)
+                    .Include(c => c.ServiceDone).ToList().AsQueryable();
+                    //.Where(d => d.UserDoService.UserName == userName);
 
             //.Where(d => d.UserDoService.UserName == userName);
         }
+
+
     }
 }

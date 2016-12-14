@@ -246,8 +246,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\CategoryServicesController.cs" />
-    <Compile Include="Controllers\CommentOfUsersController.cs" />
-    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\DoServicesController.cs" />
     <Compile Include="Controllers\DoServicesUserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -262,13 +260,17 @@
     <Compile Include="Migrations\201612071333289_Initial.Designer.cs">
       <DependentUpon>201612071333289_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612121726480_comment.cs" />
+    <Compile Include="Migrations\201612121726480_comment.Designer.cs">
+      <DependentUpon>201612121726480_comment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\CategoryService.cs" />
-    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\DoService.cs" />
+    <Compile Include="Models\DoServiceBindingModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ModelFactory.cs" />
     <Compile Include="Models\Service.cs" />
@@ -374,6 +376,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612071333289_Initial.resx">
       <DependentUpon>201612071333289_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612121726480_comment.resx">
+      <DependentUpon>201612121726480_comment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
