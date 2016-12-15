@@ -247,6 +247,7 @@
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\CategoryServicesController.cs" />
     <Compile Include="Controllers\DoServicesController.cs" />
+    <Compile Include="Controllers\DoServicesReceivedUserController.cs" />
     <Compile Include="Controllers\DoServicesUserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
@@ -276,6 +277,7 @@
     <Compile Include="Models\ModelFactory.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\ServiceBindingModels.cs" />
+    <Compile Include="Models\UserBindingModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />

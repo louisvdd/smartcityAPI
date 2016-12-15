@@ -38,20 +38,21 @@ namespace SmartCity.Controllers
 
         // PUT: api/DoServices/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutDoService(long id, DoService doService)
+        public async Task<IHttpActionResult> PutDoService(long id, DoServiceBindingModels doServiceModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
+            DoService doService = db.DoServices.Find(id);
             if (id != doService.Id)
             {
                 return BadRequest();
             }
-
-            db.Entry(doService).State = EntityState.Modified;
-
+            doService.CommentDescription = doServiceModel.CommentDescription;
+            doService.Rating = doService.Rating;
+                        
             try
             {
                 await db.SaveChangesAsync();

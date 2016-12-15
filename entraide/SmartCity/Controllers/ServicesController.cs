@@ -56,19 +56,6 @@ namespace SmartCity.Controllers
             }
             service.ServiceDone = serviceModel.ServiceDone;
             service.Category = db.CategoryServices.Find(serviceModel.Category);
-            //var service = new Service
-            //{
-            //    Label = serviceModel.Label,
-            //    DatePublicationService = serviceModel.DatePublicationService,
-            //    DescriptionService = serviceModel.DescriptionService,
-            //    ServiceDone = serviceModel.ServiceDone,
-            //    Category = db.CategoryServices.Find(serviceModel.Category),
-            //    UserNeedService = user,
-            //    RowVersion = db.Services.Find(id).RowVersion
-
-            //};
-
-            //db.Entry(service).State = EntityState.Modified;
 
             try
             {

@@ -19,6 +19,6 @@ namespace SmartCity.Controllers
             //.Where(d => d.UserDoService.UserName == userName);
         }
 
-
+        
     }
 }
