@@ -117,7 +117,7 @@ namespace SmartCity.Migrations
                 Label = "Tonte de pelouse",
                 DescriptionService = "Bonjour j'aimerais que quelqu'un tonde mon jardin",
                 Category = jardinage,
-                ServiceDone = false,
+                ServiceDone = true,
                 DatePublicationService = DateTime.Now,
                 UserNeedService = user1
 
@@ -140,7 +140,7 @@ namespace SmartCity.Migrations
             Service service3 = new Service()
             {
                 Id = 3,
-                Label = "Réparation chausettes",
+                Label = "Réparation chaussettes",
                 DescriptionService = "Bonjour j'aimerais que quelqu'un puisse réparer mes chaussettes",
                 Category = couture,
                 ServiceDone = false,
@@ -152,10 +152,10 @@ namespace SmartCity.Migrations
             Service service4 = new Service()
             {
                 Id = 2,
-                Label = "J'ai faim",
+                Label = "Besoin d'un repas",
                 DescriptionService = "Bonjour j'aimerais que quelqu'un puisse me preparer un bon repas",
                 Category = cuisine,
-                ServiceDone = false,
+                ServiceDone = true,
                 DatePublicationService = DateTime.Now,
                 UserNeedService = user2
             };

@@ -13,6 +13,7 @@ using SmartCity.Models;
 
 namespace SmartCity.Controllers
 {
+    [Authorize]
     public class DoServicesController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -45,13 +46,16 @@ namespace SmartCity.Controllers
                 return BadRequest(ModelState);
             }
 
-            DoService doService = db.DoServices.Find(id);
+            DoService doService = await db.DoServices
+                .Include(d => d.UserDoService)
+                .Include(d => d.ServiceDone)
+                .FirstOrDefaultAsync(d => d.Id == id);
             if (id != doService.Id)
             {
                 return BadRequest();
             }
             doService.CommentDescription = doServiceModel.CommentDescription;
-            doService.Rating = doService.Rating;
+            doService.Rating = doServiceModel.Rating;
                         
             try
             {

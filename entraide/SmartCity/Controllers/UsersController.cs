@@ -14,9 +14,11 @@ using SmartCity.Models;
 
 namespace SmartCity.Controllers
 {
+ 
     public class UsersController : BaseApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        [Authorize]
         public async Task<IHttpActionResult> Get([FromUri]string userName)
         {
             var user = await this.UserManager.FindByNameAsync(userName);
@@ -28,6 +30,7 @@ namespace SmartCity.Controllers
 
         }
 
+        [Authorize]
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutUser([FromUri]string email, UserBindingModels userModel)
         {

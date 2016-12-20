@@ -554,10 +554,10 @@ namespace SmartCity.Controllers
             }
 
             if (!result.Succeeded)
-            {
-                if (result.Errors != null)
-                {
+            {                {
                     foreach (string error in result.Errors)
+
+                if (result.Errors != null)
                     {
                         ModelState.AddModelError("", error);
                     }

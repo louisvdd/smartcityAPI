@@ -521,3 +521,10 @@ D:\GitHub\smartcityAPI\entraide\SmartCity\bin\ApplicationInsights.config
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\bin\ApplicationInsights.config
 D:\GitHub\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.comment.resources
 C:\Wrkfldr\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.comment.resources
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\bin\ApplicationInsights.config
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.dll
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\bin\System.Web.Cors.dll
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\bin\Microsoft.Owin.Cors.xml
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.Initial.resources
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.Migrations.comment.resources
+C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\obj\Debug\SmartCity.csproj.GenerateResource.Cache

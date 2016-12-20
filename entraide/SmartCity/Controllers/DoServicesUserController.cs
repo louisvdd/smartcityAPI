@@ -5,6 +5,7 @@ using System.Web.Http;
 
 namespace SmartCity.Controllers
 {
+    [Authorize]
     public class DoServicesUserController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();

@@ -13,6 +13,7 @@ using SmartCity.Models;
 
 namespace SmartCity.Controllers
 {
+    [Authorize]
     public class ServicesController : BaseApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
