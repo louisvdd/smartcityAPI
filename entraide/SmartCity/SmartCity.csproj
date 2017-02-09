@@ -324,7 +324,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Models\ClassDiagram1.cd" />
-    <Content Include="ConnectionString.config" />
+    <Content Include="ConnectionStringFinal.config" />
     <None Include="Properties\PublishProfiles\entraide.pubxml" />
     <None Include="Properties\PublishProfiles\G-aideAppWeb %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\g-aideAppWeb.pubxml" />
