@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\obj\Debug\Package\PackageTmp" />
-  <setAcl path="C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="C:\Users\louis.DESKTOP-KJQ1EBA\Documents\BAC3\MKTIG\APi\smartcityAPI\entraide\SmartCity\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="C:\Users\louvd\Documents\BAC 3\MKTIG\API\entraide\SmartCity\obj\Debug\Package\PackageTmp" />
+  <setAcl path="C:\Users\louvd\Documents\BAC 3\MKTIG\API\entraide\SmartCity\obj\Debug\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\louvd\Documents\BAC 3\MKTIG\API\entraide\SmartCity\obj\Debug\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>
